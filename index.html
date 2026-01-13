@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AfterClass – Circuit Module Deck (Draft)</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 24px;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      margin-top: 1em;
+      margin-bottom: 0.4em;
+    }
+    p {
+      margin: 0.2em 0 0.6em 0;
+    }
+    .intro-box {
+      border: 1px solid #ccc;
+      padding: 16px;
+      border-radius: 6px;
+      margin-bottom: 24px;
+    }
+    .next-steps {
+      margin: 0.4em 0 0.8em 0;
+    }
+    .textarea-wrapper {
+      margin: 16px 0 32px 0;
+    }
+    textarea {
+      width: 100%;
+      min-height: 150px;
+      font-family: inherit;
+      font-size: 14px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 12px 14px;
+      page-break-inside: avoid;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4em;
+      font-size: 1.05rem;
+    }
+    .field-label {
+      font-weight: 600;
+    }
+
+    /* Simple formatting toolbar */
+    .toolbar {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 8px;
+      margin-bottom: 16px;
+      background: #f5f5f5;
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .toolbar button {
+      font-size: 0.85rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid #888;
+      background: #fff;
+      cursor: pointer;
+    }
+    .toolbar button:hover {
+      background: #e6e6e6;
+    }
+    .toolbar-label {
+      font-size: 0.85rem;
+      margin-right: 4px;
+    }
+
+    .comment-box {
+      border: 1px dashed #888;
+      background: #fffff5;
+      padding: 6px 8px;
+      margin: 8px 0;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    @media print {
+      .toolbar {
+        display: none;
+      }
+      body {
+        margin: 12px;
+      }
+    }
+  </style>
+</head>
+<body contenteditable="true">
+
+  <!-- Toolbar (not editable itself) -->
+  <div class="toolbar" contenteditable="false">
+    <span class="toolbar-label">Quick formatting (select text first):</span>
+    <button type="button" onclick="formatText('bold')"><b>B</b></button>
+    <button type="button" onclick="formatText('italic')"><i>I</i></button>
+    <button type="button" onclick="formatText('underline')"><u>U</u></button>
+    <button type="button" onclick="formatText('strikeThrough')"><s>S</s></button>
+    <button type="button" onclick="formatText('foreColor','#990000')">Text color</button>
+    <button type="button" onclick="formatText('hiliteColor','#ffff00')">Highlight</button>
+  </div>
+
+  <h1>AfterClass – Circuit Module Reference Deck (Draft)</h1>
+
+  <div class="intro-box">
+    <h2>Brief Overview</h2>
+    <p>
+      This draft deck contains 20 core concepts from the circuit module of <em>Introduction to Energy Systems</em>, 
+      formatted as four-part reference cards: term/concept, definition, real-world use case, and formula/visual/analogy. 
+      The intent is to support short, optional start-of-class warm-ups and exam preparation during the Jan&nbsp;22–Feb&nbsp;5 circuit block.
+    </p>
+
+    <h2>Proposed Next Steps</h2>
+    <ol class="next-steps">
+      <li>You can review the cards for accuracy and alignment with your intended emphasis.</li>
+      <li>We adjust wording or examples as needed based on your comments.</li>
+      <li>Once approved, I will:
+        <ul>
+          <li>Generate a physical deck (printed on card-stock), and</li>
+          <li>Provide a digital version (PDF and/or flashcard format) for students to access.</li>
+        </ul>
+      </li>
+      <li>We can then pilot the cards during the circuit module with a brief, voluntary student feedback survey.</li>
+    </ol>
+  </div>
+
+  <h2>Content of Circuit Module Cards (not formatted yet)</h2>
+
+  <div class="cards-grid">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>Card 1 – Voltage (V)</h3>
+      <p><span class="field-label">Term/Concept:</span> Voltage (V)</p>
+      <p><span class="field-label">Definition:</span> Electrical potential difference that drives current through a circuit.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Determines how fast a phone charges when connected to a wall adapter.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Visual of a battery with a plus and minus terminal labeled V; arrow from high to low potential.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>Card 2 – Current (I)</h3>
+      <p><span class="field-label">Term/Concept:</span> Current (I)</p>
+      <p><span class="field-label">Definition:</span> The rate of electric charge flow through a conductor.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Controls the brightness of an LED or the speed of a fan motor.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Visual of charges moving through a wire with an arrow labeled I.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <h3>Card 3 – Resistance (R)</h3>
+      <p><span class="field-label">Term/Concept:</span> Resistance (R)</p>
+      <p><span class="field-label">Definition:</span> The opposition to current flow in a circuit element.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Used in heaters or lightbulbs to convert electrical energy into heat or light.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Resistor zig-zag symbol with an arrow showing current being reduced.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <h3>Card 4 – Ohm’s Law</h3>
+      <p><span class="field-label">Term/Concept:</span> Ohm’s Law</p>
+      <p><span class="field-label">Definition:</span> Voltage equals current times resistance in a linear element.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Selecting a resistor to limit current through an LED.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> V = IR triangle (V on top, I and R at the base).</p>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="card">
+      <h3>Card 5 – Power (P)</h3>
+      <p><span class="field-label">Term/Concept:</span> Power (P)</p>
+      <p><span class="field-label">Definition:</span> The rate at which electrical energy is converted or delivered.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Determines the wattage rating of a toaster or laptop charger.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> P = VI and P = I²R inside a lightning-bolt icon.</p>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="card">
+      <h3>Card 6 – Kirchhoff’s Current Law (KCL)</h3>
+      <p><span class="field-label">Term/Concept:</span> Kirchhoff’s Current Law (KCL)</p>
+      <p><span class="field-label">Definition:</span> The algebraic sum of currents entering a node equals the sum leaving it.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Analyzing how current splits across parallel branches in a circuit.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Node with arrows in and out; label “sum in = sum out.”</p>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="card">
+      <h3>Card 7 – Kirchhoff’s Voltage Law (KVL)</h3>
+      <p><span class="field-label">Term/Concept:</span> Kirchhoff’s Voltage Law (KVL)</p>
+      <p><span class="field-label">Definition:</span> The algebraic sum of voltages around any closed loop is zero.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Solving loop equations in multi-resistor circuits.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Closed loop with a battery and two resistors; plus/minus voltage drops around the loop.</p>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="card">
+      <h3>Card 8 – Series Circuits</h3>
+      <p><span class="field-label">Term/Concept:</span> Series Circuits</p>
+      <p><span class="field-label">Definition:</span> Components connected end-to-end with one path for current.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Older holiday light strings where one failed bulb breaks the circuit.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> R_eq = R1 + R2 with two resistors drawn in line.</p>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="card">
+      <h3>Card 9 – Parallel Circuits</h3>
+      <p><span class="field-label">Term/Concept:</span> Parallel Circuits</p>
+      <p><span class="field-label">Definition:</span> Components connected across the same two nodes, creating multiple current paths.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Household outlets where one device fails without affecting others.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> 1/R_eq = 1/R1 + 1/R2 with two resistors drawn in parallel.</p>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="card">
+      <h3>Card 10 – Equivalent Resistance</h3>
+      <p><span class="field-label">Term/Concept:</span> Equivalent Resistance</p>
+      <p><span class="field-label">Definition:</span> A single resistance that replaces a network without changing overall behavior.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Simplifying a circuit before solving for current or voltage.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Several resistors inside a box replaced by one resistor labeled R_eq.</p>
+    </div>
+
+    <!-- Card 11 -->
+    <div class="card">
+      <h3>Card 11 – Capacitor (C)</h3>
+      <p><span class="field-label">Term/Concept:</span> Capacitor (C)</p>
+      <p><span class="field-label">Definition:</span> Stores electric energy in an electric field between two plates.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Smoothing voltage fluctuations in power supplies.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Capacitor symbol “||” with Q = CV shown beneath.</p>
+    </div>
+
+    <!-- Card 12 -->
+    <div class="card">
+      <h3>Card 12 – Inductor (L)</h3>
+      <p><span class="field-label">Term/Concept:</span> Inductor (L)</p>
+      <p><span class="field-label">Definition:</span> Stores energy in a magnetic field when current changes.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Used in filters and transformers in power systems.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Coil symbol with V = L(dI/dt).</p>
+    </div>
+
+    <!-- Card 13 -->
+    <div class="card">
+      <h3>Card 13 – Diode</h3>
+      <p><span class="field-label">Term/Concept:</span> Diode</p>
+      <p><span class="field-label">Definition:</span> A component that allows current to flow in one direction only.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Prevents reverse current in solar panel arrays.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Diode triangle-to-bar symbol with arrow showing allowed direction.</p>
+    </div>
+
+    <!-- Card 14 -->
+    <div class="card">
+      <h3>Card 14 – AC (Alternating Current)</h3>
+      <p><span class="field-label">Term/Concept:</span> AC (Alternating Current)</p>
+      <p><span class="field-label">Definition:</span> Current that reverses direction periodically.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Standard power delivered from the electrical grid to homes.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Sine wave with positive and negative cycles labeled AC.</p>
+    </div>
+
+    <!-- Card 15 -->
+    <div class="card">
+      <h3>Card 15 – DC (Direct Current)</h3>
+      <p><span class="field-label">Term/Concept:</span> DC (Direct Current)</p>
+      <p><span class="field-label">Definition:</span> Current that flows in one constant direction.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Batteries and USB power supplies.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Flat horizontal line labeled DC; compare to AC wave.</p>
+    </div>
+
+    <!-- Card 16 -->
+    <div class="card">
+      <h3>Card 16 – Impedance (Z)</h3>
+      <p><span class="field-label">Term/Concept:</span> Impedance (Z)</p>
+      <p><span class="field-label">Definition:</span> Total opposition to AC current combining resistance and reactance.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Designing AC circuits and filters for desired performance.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Z = R + jX with a right-angle vector diagram of R and X.</p>
+    </div>
+
+    <!-- Card 17 -->
+    <div class="card">
+      <h3>Card 17 – Reactance (X)</h3>
+      <p><span class="field-label">Term/Concept:</span> Reactance (X)</p>
+      <p><span class="field-label">Definition:</span> Opposition to AC current due to capacitors or inductors.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Tuning circuits for specific frequencies.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> X_C = 1/(ωC) and X_L = ωL with capacitor/inductor icons.</p>
+    </div>
+
+    <!-- Card 18 -->
+    <div class="card">
+      <h3>Card 18 – DC vs AC Systems</h3>
+      <p><span class="field-label">Term/Concept:</span> DC vs AC Systems</p>
+      <p><span class="field-label">Definition:</span> DC stays constant while AC alternates, enabling efficient long-distance transmission.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Solar panels generate DC while the grid distributes AC.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> DC line from a solar icon; AC sine wave feeding a transformer icon.</p>
+    </div>
+
+    <!-- Card 19 -->
+    <div class="card">
+      <h3>Card 19 – Circuit Ground</h3>
+      <p><span class="field-label">Term/Concept:</span> Circuit Ground</p>
+      <p><span class="field-label">Definition:</span> Reference point for voltage and a path for fault current.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Safety grounding in household wiring.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Ground symbol (three descending horizontal lines).</p>
+    </div>
+
+    <!-- Card 20 -->
+    <div class="card">
+      <h3>Card 20 – Node and Mesh Concepts</h3>
+      <p><span class="field-label">Term/Concept:</span> Node and Mesh Concepts</p>
+      <p><span class="field-label">Definition:</span> Nodes are connection points; meshes are loops used for systematic analysis.</p>
+      <p><span class="field-label">Real-World Use Case:</span> Setting up nodal or mesh equations in circuit analysis.</p>
+      <p><span class="field-label">Formula/Visual/Analogy:</span> Simple circuit with nodes labeled A/B/C and a dotted loop labeled mesh.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function formatText(command, value = null) {
+      document.execCommand(command, false, value);
+    }
+
+    function insertCommentBox() {
+      const html =
+        '<div class="comment-box">Comment: (edit or type here)</div>';
+      document.execCommand('insertHTML', false, html);
+    }
+  </script>
+
+</body>
+</html>
